@@ -1,0 +1,15 @@
+<script>
+const Mobile = function(modelName,modelPrice){
+    this.model =  modelName;
+    this.price = modelPrice;
+}
+Mobile.prototype.color = "blue";
+const samsung = new Mobile("galaxy 4" , 14562)
+const nokia = new Mobile("note 4" , 2000)
+
+// nokia.color = "red" // bad practice
+const color = nokia.__proto__.color
+console.log(color) 
+console.log(samsung)
+console.log(nokia)
+</script>

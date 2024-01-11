@@ -1,0 +1,29 @@
+<script>
+    class Student {
+        constructor(nam,cls){
+       this.name = nam,
+       this.clss = cls
+        }
+        biodata(){
+              return `my name is ${this.name} , I read in class ${this.clss} `
+         }    
+}
+const soumi = new Student("soumi",12)
+const ram = new Student("ram",12)
+console.log(ram.biodata());
+
+class Player extends Student{
+    constructor(name,clss, gnm){
+       super(name,clss) 
+       this.game = gnm
+    }
+    playerbio(){
+        return `${super.biodata()}, i play ${this.game} `
+    }
+}
+
+const mampi = new Player("Mampi",12, 'football')
+
+console.log(mampi.playerbio());
+console.log(mampi.game);
+</script>
